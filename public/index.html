@@ -1,0 +1,31 @@
+<html>
+  <head>
+    <script src="/dat.gui.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/dat.gui.css">
+    <link rel="stylesheet" type="text/css" href="/styles.css">
+    <script src="/MetaBall.web.js"></script>
+  </head>
+  <body>
+    <div id="logoContainer">
+      <canvas width="550" height="450px" id="paperCanvas"></canvas>
+    </div>
+
+    <script>
+
+      let {render, params, init} = MetaBall;
+
+      var gui = new dat.GUI();
+      gui.add(params, 'handleLengthRate').onFinishChange(render);
+      gui.add(params, 'nodeScale').onFinishChange(render);
+      gui.add(params, 'v').onFinishChange(render);
+      gui.add(params, 'maxDistance').onFinishChange(render);
+      gui.add(params, 'bigCircleRadius').onFinishChange(render);
+
+      window.onload = function() {
+        init();
+        render();
+      };
+
+    </script>
+  </body>
+</html>
