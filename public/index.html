@@ -2,24 +2,59 @@
   <head>
     <script src="/dat.gui.min.js"></script>
     <link rel="stylesheet" type="text/css" href="/dat.gui.css">
+    <link href="https://fonts.googleapis.com/css?family=Arvo|Crete+Round|Kreon" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="/styles.css">
     <script src="/MetaBall.web.js"></script>
   </head>
   <body>
+    <div id="navbar">
+      <div class="navbarIcon" id="sample1" style="background-image: url(/sampleImages/sample1.png)"></div>
+      <div class="navbarIcon" id="sample2" style="background-image: url(/sampleImages/sample2.png)"></div>
+      <div class="navbarIcon" id="sample3" style="background-image: url(/sampleImages/sample3.png)"></div>
+      <div class="navbarIcon" id="sample4" style="background-image: url(/sampleImages/sample4.png)"></div>
+      <div class="navbarIcon" id="sample5" style="background-image: url(/sampleImages/sample5.png)"></div>
+      <div class="navbarIcon" id="sample6" style="background-image: url(/sampleImages/sample6.png)"></div>
+    </div>
     <div id="logoContainer">
-      <canvas width="550" height="450px" id="paperCanvas"></canvas>
+      <div id="logoComplete">
+        <h1 class="logoText" id="logoLine1" style="margin-left: -600px;">The</h1>
+        <h1 class="logoText" id="logoLine2" style="margin-left: -456px;">Brainery</h1>
+      </div>
+      <canvas width="550" height="450px" style="margin-left:-225px" id="paperCanvas"></canvas>
+    </div>
+    <div id="storeContainer">
+      <span id="svgContainer">
+        <a>Visit Store</a>
+      </span>
+        <div class="containerTitle">
+          <h2 class="logoText" >We need your support!</h1>
+          <h3 class="logoText" >
+            Get amazing Brainery goodies while also
+            <br/>
+            keeping our channel afloat!</h2>
+        </div>
     </div>
 
     <script>
 
+      // Load SVG
+      var xmlHTTP, svgDoc, container;
+      xmlHTTP = new XMLHttpRequest();
+      xmlHTTP.open("GET", "/Store.svg", false);
+      xmlHTTP.send();
+      svgDoc = document.createElement("div");
+      svgDoc.innerHTML = xmlHTTP.responseText;
+      container = document.querySelector("#svgContainer");
+      container.insertBefore(svgDoc, container.children[0]);
+
       let {render, params, init} = MetaBall;
 
-      var gui = new dat.GUI();
-      gui.add(params, 'handleLengthRate').onFinishChange(render);
-      gui.add(params, 'nodeScale').onFinishChange(render);
-      gui.add(params, 'v').onFinishChange(render);
-      gui.add(params, 'maxDistance').onFinishChange(render);
-      gui.add(params, 'bigCircleRadius').onFinishChange(render);
+      // var gui = new dat.GUI();
+      // gui.add(params, 'handleLengthRate').onFinishChange(render);
+      // gui.add(params, 'nodeScale').onFinishChange(render);
+      // gui.add(params, 'v').onFinishChange(render);
+      // gui.add(params, 'maxDistance').onFinishChange(render);
+      // gui.add(params, 'bigCircleRadius').onFinishChange(render);
 
       window.onload = function() {
         init();

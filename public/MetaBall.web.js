@@ -82,7 +82,7 @@ const init = () => {
   paper.setup(canvas);
 
   paper.project.currentStyle = {
-    fillColor: 'black'
+    fillColor: 'rgb(20, 33, 66)'
   };
 }
 
@@ -168,9 +168,9 @@ const render = () => {
 
   listener = (event) => {
     if (event.target == canvas) {
-      largeCircle.fillColor = "black";
+      largeCircle.fillColor = "rgb(20, 33, 66)";
     } else {
-      largeCircle.fillColor = "white";
+      largeCircle.fillColor = "rgba(164, 255, 228,0)";
       return;
     }
     largeCircle.position = new Point(event.offsetX, event.offsetY);
@@ -39319,11 +39319,11 @@ function addLooseExports(parse, Parser$$1, plugins$$1) {
 /* 8 */
 /***/ (function(module, exports) {
 
-const DEF_HANDLE_RATE = 2;
-const DEF_NODE_SCALE = 5;
-const DEF_V = 0.4;
-const DEF_MAX_DISTANCE = 80;
-const DEF_BIG_CIRCLE_RADIUS = 8;
+const DEF_HANDLE_RATE = 1.7;
+const DEF_NODE_SCALE = 30;
+const DEF_V = 0.6;
+const DEF_MAX_DISTANCE = 65;
+const DEF_BIG_CIRCLE_RADIUS = 15;
 
 module.exports = {
   get handleLengthRate() {

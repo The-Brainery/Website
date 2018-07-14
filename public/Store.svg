@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="157px" height="149px" viewBox="0 0 157 149" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>Store</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Store">
+            <rect id="Rectangle" fill="#FFEBCB" x="1" y="40" width="153.5" height="98"></rect>
+            <polygon id="Path" fill="#AA1F36" points="28.5625 0.5 50 0.5 31.1145833 40 1 40"></polygon>
+            <polygon id="Path-2" fill="#F2F2F2" points="31 40 62.5 40 69 0.5 50 0.5"></polygon>
+            <polygon id="Path-3" fill="#AA1F36" points="62.5 40 93.5 40 87.8166667 0.5 69.7333333 0.5"></polygon>
+            <polygon id="Path-4" fill="#F2F2F2" points="92.5733333 40 125 40 105.24 0 87 0"></polygon>
+            <polygon id="Path-5" fill="#AA1F36" points="125 40 154.5 40 127 0.5 105.5 0.5"></polygon>
+            <path d="M1,40 L31,40 L31,58 C28,65 23,68.5 16,68.5 C9,68.5 4,65 1,58 L1,40 Z" id="Path-6" fill="#CC333F"></path>
+            <path d="M61.9000244,40 L92.9000244,40 L92.9000244,58 C89.8000244,65 84.6333577,68.5 77.4000244,68.5 C70.1666911,68.5 65.0000244,65 61.9000244,58 L61.9000244,40 Z" id="Path-6" fill="#CC333F"></path>
+            <path d="M125,40 L154.5,40 L154.5,58 C151.55,65 146.633333,68.5 139.75,68.5 C132.866667,68.5 127.95,65 125,58 L125,40 Z" id="Path-6" fill="#CC333F"></path>
+            <path d="M31,40 L62.5,40 L62.5,58 C59.35,65 54.1,68.5 46.75,68.5 C39.4,68.5 34.15,65 31,58 L31,40 Z" id="Path-6" fill="#FFFFFF"></path>
+            <path d="M92.5,40 L125,40 L125,58 C121.75,65 116.333333,68.5 108.75,68.5 C101.166667,68.5 95.75,65 92.5,58 L92.5,40 Z" id="Path-6" fill="#FFFFFF"></path>
+            <rect id="Rectangle-2" stroke="#FFFFFF" stroke-width="4" fill="#CAF9FF" x="115" y="77" width="30" height="29"></rect>
+            <rect id="Rectangle-2" stroke="#FFFFFF" stroke-width="4" fill="#CAF9FF" x="115" y="107" width="30" height="29"></rect>
+            <rect id="Rectangle-2" stroke="#FFFFFF" stroke-width="4" fill="#CAF9FF" x="22" y="77" width="73" height="41"></rect>
+            <g id="Group" transform="translate(0.000000, 138.000000)">
+                <rect id="Rectangle-3" fill="#AF886B" x="0" y="3" width="157" height="8"></rect>
+                <rect id="Rectangle-3" fill="#D5A784" x="0" y="0" width="157" height="3"></rect>
+            </g>
+            <polygon id="Triangle" fill="#E8FCFF" points="24 79 92 116 24 116"></polygon>
+            <polygon id="Triangle" fill="#E8FCFF" points="117 110 143 134.5 117 134.5"></polygon>
+        </g>
+    </g>
+</svg>
