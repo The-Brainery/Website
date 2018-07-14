@@ -26,14 +26,31 @@
       <span id="svgContainer">
         <a>Visit Store</a>
       </span>
-        <div class="containerTitle">
-          <h2 class="logoText" >We need your support!</h1>
-          <h3 class="logoText" >
-            Get amazing Brainery goodies while also
-            <br/>
-            keeping our channel afloat!</h2>
-        </div>
+
+      <span id="membershipSVG">
+        <a>Purchase Membership</a>
+      </span>
+
+      <div class="containerTitle">
+        <h2 class="logoText" >We need your support!</h1>
+        <h3 class="logoText" >
+          Get amazing Brainery goodies while also
+          <br/>
+          keeping our channel afloat!</h2>
+      </div>
     </div>
+
+    <script>
+      // Load Membership SVG
+      var xmlHTTP, svgDoc, container;
+      xmlHTTP = new XMLHttpRequest();
+      xmlHTTP.open("GET", "/Membership.svg", false);
+      xmlHTTP.send();
+      svgDoc = document.createElement("div");
+      svgDoc.innerHTML = xmlHTTP.responseText;
+      container = document.querySelector("#membershipSVG");
+      container.insertBefore(svgDoc, container.children[0]);
+    </script>
 
     <script>
 
