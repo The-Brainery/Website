@@ -13,6 +13,7 @@ font-family: 'Kreon', serif; */
   border: 1px solid #f3f3f3;
   text-align: center;
   cursor: pointer;
+  text-decoration: none;
 }
 .navbarIcon:hover {
   zoom: 1.1;
@@ -165,7 +166,7 @@ body {
   /* top:-10px; */
 }
 
-.headingButtons a {
+.headingButtons b {
   top: 149px;
   font-size: 18px;
   color: white;
@@ -193,8 +194,6 @@ body {
   top: -10px;
 }
 
-
-
 .circleButton {
     background-size: 137px;
     background-repeat: no-repeat;
@@ -221,7 +220,7 @@ body {
 
 #heading-overlay {
   position:absolute;
-  background: linear-gradient(rgba(63, 81, 181, 1),rgba(63, 81, 181, 0.45));
+  background: linear-gradient(rgba(63, 81, 181, 1),rgba(63, 81, 181, 0.6));
 
   width: 100%;
   height:100%;

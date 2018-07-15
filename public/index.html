@@ -11,20 +11,38 @@
       <div class="navbarIcon comingSoon" style="background-position-y: 10px;background-size: 64px;background-image: url(/resources/storeIcon.png)">
         <b>Store</b>
       </div>
-      <div class="navbarIcon" id="sample2" style="background-position-y: 10px;background-size: 64px;background-image: url(/resources/blogIcon.png)">
+      <div class="navbarIcon comingSoon" style="background-position-y: 10px;background-size: 118px;background-image: url(/resources/ferrobotIcon.png)">
+        <b>Ferrobot</b>
+      </div>
+      <a class="navbarIcon" id="sample2" href="https://medium.com/@lucas.zeer"
+      style="background-position-y: 10px;
+      background-size: 64px;
+      background-image: url(/resources/blogIcon.png)">
         <b>Blog</b>
-      </div>
-      <div class="navbarIcon" id="sample3" style="background-position-y: 10px;background-size: 64px;background-image: url(/resources/makeIcon.png)">
+      </a>
+      <a class="navbarIcon" id="sample3" href="https://github.com/The-Brainery"
+      style="
+        background-position-y: 10px;
+        background-size: 64px;
+        background-image: url(/resources/makeIcon.png)">
         <b>Make</b>
-      </div>
-      <div class="navbarIcon" id="sample4" style="background-position-y: 10px;background-size: 64px;background-image: url(/resources/watchIcon.png)">
+      </a>
+      <a class="navbarIcon" id="sample4" href="https://www.youtube.com/channel/UCX3J6nOUs-FNbKu64ntdJGw"
+      style="background-position-y: 10px;
+      background-size: 64px;background-image: url(/resources/watchIcon.png)">
         <b>Watch</b>
-      </div>
-      <div class="navbarIcon" id="sample6" style="background-position-y: 10px;background-size: 64px;background-image: url(/resources/joinIcon.png)">
+      </a>
+      <a class="navbarIcon" id="sample6" href="https://www.linkedin.com/company/the-brainery/"
+      style="background-position-y: 10px;
+      background-size: 64px;
+      background-image: url(/resources/joinIcon.png)">
         <b>Join</b>
-      </div>
+      </a>
       <div class="navbarIcon comingSoon" style="background-position-y: 10px;background-size: 64px;background-image: url(/resources/aboutIcon.png)">
         <b>About</b>
+      </div>
+      <div class="navbarIcon comingSoon" style="background-position-y: 10px;background-size: 89px;background-image: url(/resources/membershipIcon.png)">
+        <b>Members</b>
       </div>
     </div>
     <div id="logoContainer">
@@ -46,13 +64,13 @@
 
 
       <div class="headingButtons">
-        <span class="circleButton" id="membershipButton"
+        <span class="circleButton comingSoon" id="membershipButton"
         style="background-image: url(/resources/membershipIcon.png)">
-          <a style="top: 132px;">Purchase <br/> Membership</a>
+          <b style="top: 132px;">Purchase <br/> Membership</b>
         </span>
-        <span class="circleButton" id="storeButton"
+        <span class="circleButton comingSoon" id="storeButton"
         style="background-image: url(/resources/storeIcon.png)">
-          <a>Visit Store</a>
+          <b>Visit Store</b>
         </span>
       </div>
     </div>
@@ -73,7 +91,7 @@
           <style>
             #ferrotIcon {
               background-position-y: 31%;
-              background-color:#ffbba6;
+              background-color:#a6bdff;
               background-size:171px;
               background-image: url(/resources/ferrobotIcon.png);
             }
@@ -82,8 +100,8 @@
               margin-top:-5px;
             }
           </style>
-          <span id="ferrotIcon"class="circleButton">
-            <a style="color:#142242;">Learn More</a>
+          <span id="ferrotIcon" class="circleButton comingSoon">
+            <b style="color:#142242;">Learn More</b>
           </span>
         </div>
 
@@ -99,6 +117,7 @@
 
       document.querySelectorAll(".comingSoon").forEach(function (node){
         const originalHTML = node.innerHTML;
+        const originalColor = node.style.backgroundColor;
 
         node.addEventListener("mouseover", function(e){
           node.style.backgroundColor = "rgb(244, 244, 244)";
@@ -106,7 +125,7 @@
         });
 
         node.addEventListener("mouseout", function(e){
-          node.style.backgroundColor = "white";
+          node.style.backgroundColor = originalColor;
           node.innerHTML = originalHTML;
         });
 
