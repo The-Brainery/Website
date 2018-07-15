@@ -2,18 +2,30 @@
   <head>
     <script src="/dat.gui.min.js"></script>
     <link rel="stylesheet" type="text/css" href="/dat.gui.css">
-    <link href="https://fonts.googleapis.com/css?family=Arvo|Crete+Round|Kreon" rel="stylesheet">
+    <link href="/fonts.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="/styles.css">
     <script src="/MetaBall.web.js"></script>
   </head>
   <body>
     <div id="navbar">
-      <div class="navbarIcon" id="sample1" style="background-image: url(/sampleImages/sample1.png)"></div>
-      <div class="navbarIcon" id="sample2" style="background-image: url(/sampleImages/sample2.png)"></div>
-      <div class="navbarIcon" id="sample3" style="background-image: url(/sampleImages/sample3.png)"></div>
-      <div class="navbarIcon" id="sample4" style="background-image: url(/sampleImages/sample4.png)"></div>
-      <div class="navbarIcon" id="sample5" style="background-image: url(/sampleImages/sample5.png)"></div>
-      <div class="navbarIcon" id="sample6" style="background-image: url(/sampleImages/sample6.png)"></div>
+      <div class="navbarIcon comingSoon" style="background-position-y: 10px;background-size: 64px;background-image: url(/resources/storeIcon.png)">
+        <b>Store</b>
+      </div>
+      <div class="navbarIcon" id="sample2" style="background-position-y: 10px;background-size: 64px;background-image: url(/resources/blogIcon.png)">
+        <b>Blog</b>
+      </div>
+      <div class="navbarIcon" id="sample3" style="background-position-y: 10px;background-size: 64px;background-image: url(/resources/makeIcon.png)">
+        <b>Make</b>
+      </div>
+      <div class="navbarIcon" id="sample4" style="background-position-y: 10px;background-size: 64px;background-image: url(/resources/watchIcon.png)">
+        <b>Watch</b>
+      </div>
+      <div class="navbarIcon" id="sample6" style="background-position-y: 10px;background-size: 64px;background-image: url(/resources/joinIcon.png)">
+        <b>Join</b>
+      </div>
+      <div class="navbarIcon comingSoon" style="background-position-y: 10px;background-size: 64px;background-image: url(/resources/aboutIcon.png)">
+        <b>About</b>
+      </div>
     </div>
     <div id="logoContainer">
       <div id="logoComplete">
@@ -23,13 +35,6 @@
       <canvas width="550" height="450px" style="margin-left:-225px" id="paperCanvas"></canvas>
     </div>
     <div id="storeContainer">
-      <span id="svgContainer">
-        <a>Visit Store</a>
-      </span>
-
-      <span id="membershipSVG">
-        <a>Purchase Membership</a>
-      </span>
 
       <div class="containerTitle">
         <h2 class="logoText" >We need your support!</h1>
@@ -38,31 +43,79 @@
           <br/>
           keeping our channel afloat!</h2>
       </div>
+
+
+      <div class="headingButtons">
+        <span class="circleButton" id="membershipButton"
+        style="background-image: url(/resources/membershipIcon.png)">
+          <a style="top: 132px;">Purchase <br/> Membership</a>
+        </span>
+        <span class="circleButton" id="storeButton"
+        style="background-image: url(/resources/storeIcon.png)">
+          <a>Visit Store</a>
+        </span>
+      </div>
     </div>
 
+    <div id="heading">
+      <div id="heading-image"></div>
+      <div id="heading-overlay"></div>
+      <div id="heading-content">
+        <div class="containerTitle">
+          <h2 class="logoText" >Ferrobot</h1>
+          <h3 class="logoText" >
+            Digital Biology platform.
+            <br/>
+            Using the power of Ferrofluids.</h2>
+        </div>
+
+        <div class="headingButtons">
+          <style>
+            #ferrotIcon {
+              background-position-y: 31%;
+              background-color:#ffbba6;
+              background-size:171px;
+              background-image: url(/resources/ferrobotIcon.png);
+            }
+            #ferrotIcon:hover {
+              margin-left: 25px;
+              margin-top:-5px;
+            }
+          </style>
+          <span id="ferrotIcon"class="circleButton">
+            <a style="color:#142242;">Learn More</a>
+          </span>
+        </div>
+
+        <!-- <span id="ferrobotButton" style="background-image: url(resources/ferrobotIcon.png);">
+          <a>Learn More</a>
+        </span> -->
+
+      </div>
+    </div>
+
+
     <script>
-      // Load Membership SVG
-      var xmlHTTP, svgDoc, container;
-      xmlHTTP = new XMLHttpRequest();
-      xmlHTTP.open("GET", "/Membership.svg", false);
-      xmlHTTP.send();
-      svgDoc = document.createElement("div");
-      svgDoc.innerHTML = xmlHTTP.responseText;
-      container = document.querySelector("#membershipSVG");
-      container.insertBefore(svgDoc, container.children[0]);
+
+      document.querySelectorAll(".comingSoon").forEach(function (node){
+        const originalHTML = node.innerHTML;
+
+        node.addEventListener("mouseover", function(e){
+          node.style.backgroundColor = "rgb(244, 244, 244)";
+          node.innerHTML = "<b style='color:rgb(191, 33, 33)'> Coming Soon </b>";
+        });
+
+        node.addEventListener("mouseout", function(e){
+          node.style.backgroundColor = "white";
+          node.innerHTML = originalHTML;
+        });
+
+        console.log({node})
+      });
+
     </script>
 
     <script>
-
-      // Load SVG
-      var xmlHTTP, svgDoc, container;
-      xmlHTTP = new XMLHttpRequest();
-      xmlHTTP.open("GET", "/Store.svg", false);
-      xmlHTTP.send();
-      svgDoc = document.createElement("div");
-      svgDoc.innerHTML = xmlHTTP.responseText;
-      container = document.querySelector("#svgContainer");
-      container.insertBefore(svgDoc, container.children[0]);
 
       let {render, params, init} = MetaBall;
 
